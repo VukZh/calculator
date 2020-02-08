@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
 
-  entry: './src/js/index.js',
+  entry: './src/js/index',
 
   //  output: //default
 
@@ -28,6 +28,13 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
       {
         test: /\.html$/,
         use: [
@@ -68,6 +75,10 @@ module.exports = {
         ]
       }
     ]
+  },
+  
+  resolve: {
+    extensions: ['.js', '.jsx']
   }
 
 
