@@ -46,7 +46,10 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-icons": "^1.0.0-alpha2",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0"
   },
   "babel": {
