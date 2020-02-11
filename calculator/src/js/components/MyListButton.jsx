@@ -5,7 +5,7 @@ import React, {
 import ListGroup from 'react-bootstrap/ListGroup';
 
 
-const MyInputPercent = () => (
+const MyListButton = () => (
 <ListGroup horizontal className='customHeight customMargin'>
   <ListGroup.Item action className='centerTxt'>No style</ListGroup.Item>
   <ListGroup.Item action variant="dark" className='centerTxt'>Primary</ListGroup.Item>
@@ -29,4 +29,4 @@ const MyInputPercent = () => (
 
 
 
-export default MyInputPercent;
+export default MyListButton;

@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import ttimg from '../../assets/images/alert-square-fill.svg';
 
 const MyWorth = () => (
-  <Accordion>
+  <Accordion className='customMargin'>
     <Card>
       <Card.Header>
         <Accordion.Toggle as={Button} variant="link" eventKey="1">

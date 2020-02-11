@@ -32,6 +32,10 @@
   height: 3vw;
   line-height: 1vw;
 }
+.customHeight3 {
+  height: 5vw;
+  line-height: 3vw;
+}
 .customMargin {
   width: 94%;
   margin: 2% 3%;
@@ -56,4 +60,26 @@
 }
 .customColor {
   color: #00f;
+}
+.container2 {
+  left: 65%;
+  position: absolute;
+  width: 35%;
+  background-color: #0ff;
+}
+.container1 {
+  position: absolute;
+  width: 60%;
+}
+@media screen and (max-width: 480px) {
+  .container2 {
+    position: static;
+    background-color: #0ff;
+    margin: 3%;
+    width: 94%;
+  }
+  .container1 {
+    position: static;
+    width: 100%;
+  }
 }
