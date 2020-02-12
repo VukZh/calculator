@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ttimg from '../../assets/images/alert-square-fill.svg';
 
-const MyWorth = () => (
+const MyWorth = ({price70}) => (
   <Accordion className='customMargin'>
     <Card>
       <Card.Header>
@@ -15,7 +15,7 @@ const MyWorth = () => (
         </Accordion.Toggle>
       </Card.Header>
       <Accordion.Collapse eventKey="1">
-        <Card.Body className='customColor' ><img src={ttimg} className ='worth' alt =''/>Only $xxxxx has been applied to the payment, which is the maximum allowed 70% of the MSRP price</Card.Body>
+        <Card.Body className='customColor' ><img src={ttimg} className ='worth' alt =''/>Only {price70} has been applied to the payment, which is the maximum allowed 70% of the MSRP price</Card.Body>
       </Accordion.Collapse>
     </Card>
   </Accordion>

@@ -13,17 +13,27 @@ import MyButtonToolbarArr from "./MyButtonToolbarArr.jsx";
 
 //const a = [10,11,12,13,14];
 
-const MyLoan = ({data,def}) => (
+const MyLoan = ({terms,creditScore,def1,def2,price70}) => (
   <div>
-     <MyToolTip tips="--Tooltip--"/>
-        MyToolTip
-     <MyInputDollars/>
-     <MyInputPercent/>
-     <MyListButton/>
-     <MyButtonToolbar/>
-     <MyButtonToolbarArr arr={data} def={def}/>
-     <My1Button text='GET'/>
-     <MyWorth/>
+      <p></p>
+      <span>Edmunds Suggested Price</span> 
+      <MyToolTip tips="About Edmunds Suggested Price"/>
+      <div>Term (Months)</div>   
+      <MyButtonToolbarArr arr={terms} def={def1}/> 
+      <span>Trade-In Value</span> 
+      <MyToolTip tips="About Trade-In Value"/> 
+      <MyInputDollars/> 
+      <MyWorth price70={price70}/>  
+      <span>Down Payment</span> 
+      <MyToolTip tips="About Down Payment"/> 
+      <MyInputDollars/>
+      <div></div>
+      <span>Approx. Credit Score</span> 
+      <MyToolTip tips="About Approx. Credit Score"/>  
+      <MyButtonToolbarArr arr={creditScore} def={def2}/>  
+      <span>Estimated ARP</span> 
+      <MyToolTip tips="About Estimated ARP"/> 
+      <MyInputPercent/>
   </div>
 );
 

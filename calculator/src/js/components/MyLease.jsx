@@ -10,18 +10,27 @@ import MyButtonToolbar from "./MyButtonToolbar.jsx";
 import My1Button from "./My1Button.jsx";
 import MyWorth from "./MyWorth.jsx";
 import MyButtonToolbarArr from "./MyButtonToolbarArr.jsx";
+import MyInputSelect from "./MyInputSelect.jsx";
 
-const MyLease = ({data,def}) => (
+
+
+const MyLease = ({terms,creditScore,miles,def1,def2,def3}) => (
   <div>
-     <MyToolTip tips="--Tooltip--"/>
-        MyToolTip
-     <MyInputDollars/>
-     <MyInputPercent/>
-     <MyListButton/>
-     <MyButtonToolbar/>
-     <MyButtonToolbarArr arr={data} def={def}/>
-     <My1Button text='GET'/>
-     <MyWorth/>
+      <p></p>
+      <div>Term (Months)</div>   
+      <MyInputSelect arr={terms} def={def1}/> 
+      <span>Trade-In Value</span> 
+      <MyToolTip tips="About Trade-In Value"/> 
+      <MyInputDollars/> 
+      <span>Down Payment</span> 
+      <MyToolTip tips="About Down Payment"/> 
+      <MyInputDollars/>
+      <div></div>
+      <div>Mileages</div>   
+      <MyInputSelect arr={miles} def={def2}/> 
+      <span>Approx. Credit Score</span> 
+      <MyToolTip tips="About Approx. Credit Score"/>  
+      <MyInputSelect arr={creditScore} def={def3}/> 
   </div>
 );
 
