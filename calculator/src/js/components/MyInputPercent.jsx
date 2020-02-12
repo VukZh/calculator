@@ -8,7 +8,7 @@ import FormControl from 'react-bootstrap/FormControl';
 const MyInputPercent = ({val}) => (
   <div className='inline'>
     <InputGroup className='mb-3 customMargin'>
-      <FormControl placeholder='0.00' value ={val} className='customHeight'/>
+      <FormControl type="number" step="0.1" min="0" placeholder='0,0' value ={val} className='customHeight'/>
       <InputGroup.Append className='customHeight'>
         <InputGroup.Text>%</InputGroup.Text>
       </InputGroup.Append>

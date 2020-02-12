@@ -16,8 +16,8 @@ const MyInputSelect = ({arr,def,txt}) => {
   return (
       <Form>
         <Form.Group>
-          <Form.Label className='inline'>{txt}</Form.Label>
-          <Form.Control as="select">
+          <Form.Label>{txt}</Form.Label>
+          <Form.Control as="select" className='customHeight3'>
             {oneSelectArr}
           </Form.Control>
         </Form.Group>

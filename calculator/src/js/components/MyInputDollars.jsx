@@ -5,18 +5,23 @@ import React, {
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 
-const MyInputDollars = ({val}) => (
-  <div className='inline'>
-    <InputGroup className='mb-3 customMargin'>
-      <InputGroup.Prepend className='customHeight'>
-        <InputGroup.Text>$</InputGroup.Text>
-      </InputGroup.Prepend>
-      <FormControl placeholder='0'  value ={val} className='customHeight'/>
-    </InputGroup>
-    <div></div>
-  </div>
+const MyInputDollars = ({val}) => {
+  
+    return (
+      <div className='inline'>
+        <InputGroup className='mb-3 customMargin'>
+          <InputGroup.Prepend className='customHeight'>
+            <InputGroup.Text>$</InputGroup.Text>
+          </InputGroup.Prepend>
+          <FormControl type="number" placeholder='0' min="0" value ={val} className='customHeight' onChange={(e)=>alert({val})}/>
+        </InputGroup>
+        <div></div>
+      </div>
+    )
+ 
 
-);
+
+};
 
 
 
