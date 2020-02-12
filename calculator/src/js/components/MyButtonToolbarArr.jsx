@@ -15,7 +15,7 @@ const MyButtonToolbarArr = ({arr,def}) => {
   });
 
   return (
-        <ToggleButtonGroup type="radio" name="options" defaultValue={def} className='customHeight customMargin'>
+        <ToggleButtonGroup type="radio" name="options" defaultValue={def} className='customHeight customMargin' >
       {oneButtonArr}
     </ToggleButtonGroup>
   );

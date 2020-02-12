@@ -10,8 +10,6 @@ import MyButtonToolbarArr from "./MyButtonToolbarArr.jsx";
 import MyInputSelect from "./MyInputSelect.jsx";
 import MyZip from "./MyZip.jsx";
 
-
-
 const MyLease = ({terms,creditScore,miles,def1,def2,def3,zip,down,tiv}) => (
   <div>
       <p></p>
@@ -32,7 +30,5 @@ const MyLease = ({terms,creditScore,miles,def1,def2,def3,zip,down,tiv}) => (
       <MyInputSelect arr={creditScore} def={def3}/> 
   </div>
 );
-
-
 
 export default MyLease;

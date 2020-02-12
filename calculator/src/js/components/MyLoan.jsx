@@ -11,8 +11,6 @@ import MyButtonToolbarArr from "./MyButtonToolbarArr.jsx";
 import MyZip from "./MyZip.jsx";
 
 
-//const a = [10,11,12,13,14];
-
 const MyLoan = ({terms,creditScore,def1,def2,price70,zip,percent,down,tiv}) => (
   <div>
       <p></p>
@@ -37,7 +35,5 @@ const MyLoan = ({terms,creditScore,def1,def2,price70,zip,percent,down,tiv}) => (
       <MyInputPercent val={percent}/>
   </div>
 );
-
-
 
 export default MyLoan;

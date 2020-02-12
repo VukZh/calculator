@@ -43,8 +43,7 @@ class App extends Component {
       postal:'',
       carData: carData(),
       currLoan: 0,
-      currLease: 0,
-      
+      currLease: 0,      
       
 //      downPayment: 0,
 //      tradeIn: 0,
@@ -61,6 +60,7 @@ class App extends Component {
       
     }
   }
+
   
   componentDidMount() {
     fetch(`https://ipinfo.io/json?token=e49bbc26ef897a`)
@@ -80,15 +80,9 @@ class App extends Component {
       creditScoreValue = 1.2
     }
     
-//    console.log ('1- msrp ' + this.state.carData.msrp + ' tradeIn ' + this.state.tradeIn + ' downPayment ' + this.state.downPayment 
-//                 + ' loanTerms ' + loanTermsArr[this.state.currLoanTerms] + ' creditScoreValue ' + creditScoreValue + ' ARP ' + this.state.APR)
-    
       this.setState({
         currLoan: ((this.state.carData.msrp - this.state.tradeIn - this.state.downPayment) / loanTermsArr[this.state.currLoanTerms] * creditScoreValue * this.state.APR * 0.01).toFixed(2)
       });
-    
-//    console.log ('2- msrp ' + this.state.carData.msrp + ' tradeIn ' + this.state.tradeIn + ' downPayment ' + this.state.downPayment 
-//                 + ' loanTerms ' + loanTermsArr[this.state.currLoanTerms] + ' creditScoreValue ' + creditScoreValue + ' ARP ' + this.state.APR)    
     
       this.setState({
         currLease: ((this.state.carData.msrp - this.state.tradeIn - this.state.downPayment) * mileagesArr[this.state.currMileagesArr] / 10000 / leaseTermsArr[this.state.currLeaseTerms] * creditScoreValue).toFixed(2)

@@ -5,9 +5,7 @@ import Form from 'react-bootstrap/Form';
 
 const MyInputSelect = ({arr,def,txt}) => {  
 
-
   const oneSelectArr = arr.map((item, ind) => {
-
     return (
       (ind === def)?<option selected>{item}</option>:<option>{item}</option>
     );    
@@ -23,8 +21,6 @@ const MyInputSelect = ({arr,def,txt}) => {
         </Form.Group>
       </Form>
   )
-
 };
-
 
 export default MyInputSelect;

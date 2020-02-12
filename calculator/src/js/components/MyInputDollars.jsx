@@ -13,16 +13,12 @@ const MyInputDollars = ({val}) => {
           <InputGroup.Prepend className='customHeight'>
             <InputGroup.Text>$</InputGroup.Text>
           </InputGroup.Prepend>
-          <FormControl type="number" placeholder='0' min="0" value ={val} className='customHeight' onChange={(e)=>alert({val})}/>
+          <FormControl type="number" placeholder='0' min="0" value ={val} className='customHeight'/>
         </InputGroup>
         <div></div>
       </div>
     )
- 
-
 
 };
-
-
 
 export default MyInputDollars;

@@ -21,5 +21,4 @@ const MyWorth = ({price70}) => (
   </Accordion>
 );
 
-
 export default MyWorth;

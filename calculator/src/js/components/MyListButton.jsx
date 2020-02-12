@@ -4,7 +4,6 @@ import React, {
 
 import ListGroup from 'react-bootstrap/ListGroup';
 
-
 const MyListButton = () => (
 <ListGroup horizontal className='customHeight customMargin'>
   <ListGroup.Item action className='centerTxt'>No style</ListGroup.Item>
@@ -26,7 +25,5 @@ const MyListButton = () => (
   </ListGroup.Item>
 </ListGroup>
 );
-
-
 
 export default MyListButton;
