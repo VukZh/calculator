@@ -9,7 +9,8 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open",
     "watch": "webpack --watch",
-    "clean": "rd /s /q dist"
+    "clean": "rd /s /q dist",
+    "lint": "eslint src/js/components/*.jsx"
   },
   "repository": {
     "type": "git",
