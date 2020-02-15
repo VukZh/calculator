@@ -2,22 +2,29 @@ import React, {
   Component
 } from "react";
 
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Button from 'react-bootstrap/Button';
 
 
-const MyButtonToolbarArr = ({arr,def}) => {
+const MyButtonToolbarArr = ({arr,def,func}) => {
   
   const oneButtonArr = arr.map((item, ind) => {
-    return (
-      <ToggleButton variant='outline-secondary' value={ind} className='customHeight2'>{item}</ToggleButton>
-    );    
+    if (ind === def) {
+        return (
+        <Button variant='outline-secondary' value={ind} className='customHeight2 selButton' >{item}</Button>
+      );
+    } else {
+      return (
+      <Button variant='outline-secondary' value={ind} className='customHeight2' >{item}</Button>
+    );   
+    }
+ 
   });
 
   return (
-        <ToggleButtonGroup type="radio" name="options" defaultValue={def} className='customHeight customMargin' >
+        <ButtonGroup type="radio" name="options" defaultValue={def} className='customHeight customMargin' onMouseUp={(e)=>func(e.target.value)}>
       {oneButtonArr}
-    </ToggleButtonGroup>
+    </ButtonGroup>
   );
 
 

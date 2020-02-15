@@ -4,7 +4,7 @@ import React, {
 
 import ttimg from '../../assets/images/phone.svg';
 
-const MyInfoCard = ({data}) => {
+const MyInfoCard = ({data,tx}) => {
   let phone = 'tel:' + data.dealerPhoneNumber;
   return (  <Fragment>
     <div className = 'inline2'>MSRP
@@ -28,6 +28,10 @@ const MyInfoCard = ({data}) => {
     <div className = 'inline2'>Rating
     <div className = 'inline2'>{data.dealerRating}</div>
   </div>
+   <p></p>
+    <div className = 'inline2'>Taxes
+    <div className = 'inline2'>{tx.split('').map(num => num * 11)}</div>
+  </div>  
   </Fragment>)
 
 };

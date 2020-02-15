@@ -5,7 +5,7 @@ const data = () => {
     "dealerPhoneNumber": "+3059741103",
     "dealUrl": "https://www.toyotaofnorthmiami.com/",
     "dealerRating": 3.5,
-    "msrp": 28904
+    "msrp": 40000
   };
 };
 export default data;

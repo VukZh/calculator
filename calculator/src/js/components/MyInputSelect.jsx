@@ -3,19 +3,18 @@ import React, {
 } from "react";
 import Form from 'react-bootstrap/Form';
 
-const MyInputSelect = ({arr,def,txt}) => {  
+const MyInputSelect = ({arr,def,func}) => {  
 
   const oneSelectArr = arr.map((item, ind) => {
     return (
-      (ind === def)?<option selected>{item}</option>:<option>{item}</option>
+      (ind === def)?<option className='option' selected >{item}</option>:<option className='option'>{item}</option>
     );    
   });
 
   return (
       <Form>
         <Form.Group>
-          <Form.Label>{txt}</Form.Label>
-          <Form.Control as="select" className='customHeight3'>
+          <Form.Control as="select" onChange={(e)=>func(e.target.value)} className='customHeight3'>
             {oneSelectArr}
           </Form.Control>
         </Form.Group>
@@ -24,3 +23,8 @@ const MyInputSelect = ({arr,def,txt}) => {
 };
 
 export default MyInputSelect;
+
+
+
+
+//onChange={(e) => {func(e.target.value)}} 

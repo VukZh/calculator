@@ -5,29 +5,28 @@ import React, {
 import MyToolTip from "./MyToolTip.jsx";
 import MyInputDollars from "./MyInputDollars.jsx";
 import MyInputPercent from "./MyInputPercent.jsx";
-import MyListButton from "./MyListButton.jsx";
 import MyButtonToolbarArr from "./MyButtonToolbarArr.jsx";
 import MyInputSelect from "./MyInputSelect.jsx";
 import MyZip from "./MyZip.jsx";
 
-const MyLease = ({terms,creditScore,miles,def1,def2,def3,zip,down,tiv}) => (
+const MyLease = ({terms,creditScore,miles,def1,leaseTermF,def2,mF,def3,creditF,zip,down,downF,tiv,tivF,onClick,postalF}) => (
   <div>
       <p></p>
-      <MyZip zip={zip}/>
+      <MyZip zip={zip} func={postalF}/>
       <div>Term (Months)</div>   
-      <MyInputSelect arr={terms} def={def1}/> 
+      <MyInputSelect arr={terms} def={def1} func={leaseTermF}/> 
       <span>Trade-In Value</span> 
       <MyToolTip tips="About Trade-In Value"/> 
-      <MyInputDollars val={tiv}/> 
+      <MyInputDollars val={tiv} func={tivF}/> 
       <span>Down Payment</span> 
       <MyToolTip tips="About Down Payment"/> 
-      <MyInputDollars val={down}/>
+      <MyInputDollars val={down} func={downF}/>
       <div></div>
       <div>Mileages</div>   
-      <MyInputSelect arr={miles} def={def2}/> 
-      <span>Approx. Credit Score</span> 
+      <MyInputSelect arr={miles} def={def2} func={mF}/> 
+      <span onClick={onClick}>Approx. Credit Score</span> 
       <MyToolTip tips="About Approx. Credit Score"/>  
-      <MyInputSelect arr={creditScore} def={def3}/> 
+      <MyInputSelect arr={creditScore} def={def3} func={creditF}/> 
   </div>
 );
 
