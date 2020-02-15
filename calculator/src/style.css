@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500,700,800,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Fira Sans Condensed", sans-serif;
+  user-select: none;
+  color: #495057;
+  font-size: 2vw;
+  outline: none;
+}
+body {
+  transform: scale(0.7);
+}
+.app {
+  color: #00f;
+  font-weight: 700;
+}
+.toolTip {
+  cursor: pointer;
+  margin: 1vw;
+  width: 2vw;
+}
+.worth {
+  margin: 1vw;
+  width: 3vw;
+}
+.customHeight {
+  height: 3vw;
+  line-height: 0.2vw;
+}
+.customHeight2 {
+  height: 3vw;
+  line-height: 1vw;
+}
+.customHeight3 {
+  height: 4vw;
+  line-height: 2vw;
+}
+.customMargin {
+  width: 94%;
+  margin: 2% 3%;
+}
+.centerTxt {
+  text-align: center;
+}
+:focus {
+  outline-style: none;
+  outline-width: 0px !important;
+  outline-color: none !important;
+}
+.btn-toolbar:hover {
+  background-color: #f00 !important;
+}
+.btn-toolbar {
+  background-color: #808080 !important;
+}
+.customMargin2 {
+  width: 80%;
+  margin: 2% 10%;
+}
+.customMargin3 {
+  width: 94%;
+  margin: 0 3%;
+}
+.customColor {
+  color: #00f;
+}
+.container2 {
+  left: 65%;
+  position: absolute;
+  width: 31%;
+  padding: 2%;
+  margin: 2%;
+  border: 1px solid #808080;
+}
+.container1 {
+  position: absolute;
+  width: 60%;
+  padding: 2%;
+}
+.inline {
+  display: inline-block;
+  width: 71%;
+}
+.inline2 {
+  display: inline-block;
+  margin: 1vw;
+}
+.selButton {
+  background-color: #6c757d;
+  color: #fff;
+}
+.option {
+  font-size: 1.3vw;
+}
+@media screen and (max-width: 480px) {
+  .container2 {
+    left: 0;
+    position: absolute;
+    margin: 3%;
+    width: 94%;
+    right: 0;
+  }
+  .container1 {
+    position: static;
+    width: 100%;
+  }
+  .inline {
+    width: 83%;
+  }
+}
